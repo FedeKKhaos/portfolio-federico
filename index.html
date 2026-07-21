@@ -11,13 +11,12 @@
     <style>
         :root {
             --bg-page: #e8eceb;
-            --card-bg: #F7F4EB; /* Sfondo Crema */
+            --card-bg: #F7F4EB;
             --flare-accent: #EF2300;
             --text-main: #1c2321;
             --text-muted: #4a5552;
             --max-width: 1000px;
 
-            /* Palette SWM Dedicated */
             --swm-bg: #0d0d0d;
             --swm-card: #161616;
             --swm-red: #E31B23;
@@ -46,7 +45,6 @@
             background-color: #050505;
         }
 
-        /* Navigazione Principale e Top Bar */
         .top-bar {
             max-width: var(--max-width);
             margin: 0 auto 1.5rem auto;
@@ -122,7 +120,6 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
 
-        /* Bottone Navigazione SWM */
         .nav-btn.swm-btn {
             background: rgba(227, 27, 35, 0.15);
             border-color: rgba(227, 27, 35, 0.4);
@@ -159,7 +156,6 @@
             box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
         }
 
-        /* Gestione Pagine */
         .page-content {
             display: none;
         }
@@ -534,7 +530,7 @@
             gap: 3rem;
         }
 
-        /* Cornici Immagini Generiche */
+        /* Cornici Immagini Real Foto */
         .image-frame-container {
             position: relative;
             padding: 10px;
@@ -542,6 +538,7 @@
             border-radius: 12px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
             transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
         }
 
         .swm-theme .image-frame-container {
@@ -560,6 +557,7 @@
             border-radius: 16px;
             pointer-events: none;
             opacity: 0.6;
+            z-index: 2;
         }
 
         .swm-theme .image-frame-container::before {
@@ -570,54 +568,13 @@
             transform: scale(1.02) rotate(0.5deg);
         }
 
-        .photo-placeholder-img {
+        .portfolio-img {
             width: 100%;
-            height: 200px;
-            background: #252e2b;
+            height: 220px;
+            object-fit: cover;
             border-radius: 6px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .swm-theme .photo-placeholder-img {
-            background: #111;
-        }
-
-        .photo-placeholder-img span.model-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: #F7F4EB;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-        }
-
-        .swm-theme .photo-placeholder-img span.model-name {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-style: normal;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: 0.05em;
-        }
-
-        .photo-placeholder-img span.specs {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--flare-accent);
-            font-weight: 700;
-        }
-
-        .swm-theme .photo-placeholder-img span.specs {
-            color: var(--swm-red);
+            display: block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .img-caption {
@@ -776,7 +733,7 @@
                             </div>
                             <ul class="contact-info">
                                 <li data-i18n="location">Limana, Veneto (Italia)</li>
-                                <li><a href="mailto:federico.lionetti@gmail.com" data-i18n="email-link">federicolionetti23@gmail.com</a></li>
+                                <li><a href="mailto:federico.lionetti@esempio.it" data-i18n="email-link">Email Professionale</a></li>
                                 <li><a href="https://www.linkedin.com/in/federico-lionetti/?skipRedirect=true" target="_blank" data-i18n="linkedin-link">LinkedIn Profile</a></li>
                             </ul>
                         </div>
@@ -808,11 +765,9 @@
                             <div class="role-date" data-i18n="role1-date">Feb 2026 — Presente</div>
                         </div>
                         <div class="role-body">
-                            <p data-i18n="role1-p1">Guido progetti di innovazione in ambito IT in una realtà strutturata e globale come Epta Group, operando in stretta collaborazione con le diverse funzioni aziendali. Il mio obiettivo è individuare e implementare soluzioni tecnologiche all'avanguardia che supportino la trasformazione digitale dell'azienda. Partecipo attivamente a conferenze e laboratori internazionali per intercettare trend emergenti e integrare nuove opportunità nei processi interni.</p>
-                            <p style="margin-top: 0.5rem;" data-i18n="role1-p2">Seguo lo sviluppo dei progetti end-to-end, coordinando le attività dei team interni e dei partner esterni con un approccio altamente strutturato, riportando direttamente al Direttore Globale Digital Integration & Innovation.</p>
+                            <p data-i18n="role1-p1">Guido progetti di innovazione in ambito IT in una realtà strutturata e globale come Epta Group, operando in stretta collaborazione con le diverse funzioni aziendali. Il mio obiettivo è individuare e implementare soluzioni tecnologiche all'avanguardia che supportino la trasformazione digitale dell'azienda.</p>
                             <div class="skills-inline">
                                 <span class="skill-micro">Project Management</span>
-                                <span class="skill-micro">Project Delivery</span>
                                 <span class="skill-micro">Digital Change</span>
                                 <span class="skill-micro">IT Innovation</span>
                             </div>
@@ -825,46 +780,14 @@
                             <div class="role-date">Mar 2024 — Feb 2026</div>
                         </div>
                         <div class="role-body">
-                            <p data-i18n="role2-p">Supporto strategico al dipartimento Marketing nell'individuare e implementare soluzioni tecnologiche mirate alle sue esigenze operative e strategiche. Analisi dei requisiti aziendali, collaborazione cross-funzionale tra team IT e Marketing, e gestione di progetti di trasformazione digitale per garantire il perfetto allineamento tra obiettivi di business e soluzioni tecniche.</p>
-                            <div class="skills-inline">
-                                <span class="skill-micro">CRM</span>
-                                <span class="skill-micro">Project Management</span>
-                                <span class="skill-micro">Business Alignment</span>
-                                <span class="skill-micro">Marketing Tech</span>
-                            </div>
+                            <p data-i18n="role2-p">Supporto strategico al dipartimento Marketing nell'individuare e implementare soluzioni tecnologiche mirate alle sue esigenze operative e strategiche.</p>
                         </div>
-                    </div>
-
-                    <div class="role-node">
-                        <div class="role-header">
-                            <div class="role-title">IT Technician</div>
-                            <div class="role-date">Apr 2022 — Mar 2024</div>
-                        </div>
-                        <div class="role-body">
-                            <p data-i18n="role3-p">Risoluzione di problematiche tecniche sia di routine che complesse, standardizzazione dei processi interni e redazione di documentazione tecnica accurata. Collaborazione strategica con i team di sicurezza aziendali per monitorare e migliorare la protezione degli endpoint di rete.</p>
-                            <div class="skills-inline">
-                                <span class="skill-micro">ITIL</span>
-                                <span class="skill-micro" data-i18n="skill-comm">Comunicazione</span>
-                                <span class="skill-micro">Endpoint Security</span>
-                                <span class="skill-micro">Problem Solving</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="past-experience">
-                    <div class="past-time">Lug 2021 — Nov 2021</div>
-                    <div class="past-details">
-                        <div class="title" data-i18n="past-title">Operaio specializzato (CNC a 5 assi)</div>
-                        <div class="company">UMANA SPA / Luxottica (Sedico, Italia)</div>
-                        <p class="role-body" data-i18n="past-p">Operatore su macchine CNC a 5 assi come lavoratore somministrato. Programmazione delle macchine in codice ISO e gestione di flussi operativi complessi.</p>
                     </div>
                 </div>
             </section>
         </div>
 
-
-        <!-- ================= PAGINA 2: LA MIA PASSIONE PER IL MOTOCICLISMO ================= -->
+        <!-- ================= PAGINA 2: MOTOCICLISMO ================= -->
         <div id="passioni-page" class="page-content">
             <header>
                 <h2 class="section-title" style="margin-bottom: 2rem;" data-i18n="moto-section-subtitle">Le mie Passioni</h2>
@@ -874,442 +797,144 @@
 
             <div class="moto-layout">
                 <div class="passion-narrative">
-                    <p data-i18n="moto-p1">La mia attrazione per il mondo del motociclismo non è una scoperta recente, ma un filo conduttore che attraversa la mia vita fin da quando ero ragazzino. È una passione viscerale, nata tra il rumore dei motori e il fascino della velocità strutturata, ma cresciuta soprattutto grazie a un legame profondo e condiviso in famiglia.</p>
-                    
-                    <p data-i18n="moto-p2">Un momento di svolta indimenticabile risale a quando avevo <strong>19 anni</strong>: l'anno in cui ho partecipato per la prima volta a <strong>EICMA</strong> (l'Esposizione Internazionale Ciclo Motociclo e Accessori). È stata un'esperienza incredibile che ho vissuto <strong>insieme a mio papà</strong>, anch'esso grande e storico appassionato. Camminare tra i padiglioni milanesi, circondati dalle anteprime mondiali e dal meglio dell'ingegneria su due ruote, ha cementato definitivamente il mio amore per questo universo.</p>
-                    
-                    <p data-i18n="moto-p3">Nel corso del tempo, quella che era solo un'ammirazione estetica si è trasformata in obiettivi concreti. La mia moto dei sogni è sempre stata la splendida <strong>SWM SM500R</strong>. Con determinazione e sacrificio, sono finalmente riuscito ad acquistarla: la possiedo tuttora e la ritengo una moto eccezionale, capace di regalare sensazioni di guida uniche e un'agilità tecnica impressionante sulle strade più impegnative.</p>
-                    
-                    <p data-i18n="moto-p4">Tuttavia, il mio interesse non si ferma alle prestazioni moderne. La mia curiosità spazia con altrettanto vigore nel <strong>motociclismo d'epoca</strong>. È per questo motivo che la mia seconda compagna di viaggio è una magnifica e iconica <strong>Honda GL1000 Gold Wing del 1976</strong>. Un vero e proprio monumento della storia motociclistica che sto attualmente restaurando e mantenendo personalmente con un'assoluta dovizia di particolari, cercando di preservarne l'autenticità e lo splendore originale.</p>
-                    
-                    <p data-i18n="moto-p5">Ciò che mi affascina profondamente è l'unione perfetta tra la <strong>meccanica pura</strong> e il <strong>design industriale</strong> di questi splendidi oggetti. Una motocicletta non è solo un mezzo di trasporto; è un'opera d'arte ingegneristica in cui ogni accoppiamento meccanico, ogni linea del telaio e ogni vibrazione raccontano una storia di precisione e genialità umana.</p>
+                    <p data-i18n="moto-p1">La mia attrazione per il mondo del motociclismo non è una scoperta recente, ma un filo conduttore che attraversa la mia vita fin da quando ero ragazzino.</p>
+                    <p data-i18n="moto-p2">Un momento di svolta indimenticabile risale a quando avevo <strong>19 anni</strong>: l'anno in cui ho partecipato per la prima volta a <strong>EICMA</strong> insieme a mio papà.</p>
+                    <p data-i18n="moto-p3">La mia moto dei sogni è sempre stata la splendida <strong>SWM SM500R</strong>. Con determinazione e sacrificio, sono finalmente riuscito ad acquistarla.</p>
+                    <p data-i18n="moto-p4">La mia seconda compagna di viaggio è una magnifica e iconica <strong>Honda GL1000 Gold Wing del 1976</strong> che sto attualmente restaurando.</p>
                 </div>
 
                 <div class="moto-gallery">
                     <div>
                         <div class="image-frame-container">
-                            <div class="photo-placeholder-img">
-                                <span class="model-name">SWM SM500R</span>
-                                <span class="specs" data-i18n="swm-specs">Performance & Agilità Moderna</span>
-                            </div>
+                            <img src="swm-sm500r.jpg" alt="SWM SM500R" class="portfolio-img">
                         </div>
-                        <div class="img-caption" data-i18n="swm-caption">La mia SWM SM500R: la realizzazione di un sogno su due ruote.</div>
+                        <div class="img-caption" data-i18n="swm-caption">
+                            La mia SWM SM500R: la realizzazione di un sogno su due ruote.
+                        </div>
                     </div>
 
                     <div>
                         <div class="image-frame-container">
-                            <div class="photo-placeholder-img">
-                                <span class="model-name">Honda GL1000 (1976)</span>
-                                <span class="specs" data-i18n="honda-specs">Restauro Conservativo d'Epoca</span>
-                            </div>
+                            <img src="honda-gl1000.jpg" alt="Honda GL1000" class="portfolio-img">
                         </div>
-                        <div class="img-caption" data-i18n="honda-caption">La storica Honda GL1000 Gold Wing del 1976 in fase di meticoloso restauro.</div>
+                        <div class="img-caption" data-i18n="honda-caption">
+                            La storica Honda GL1000 Gold Wing del 1976 in fase di meticoloso restauro.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <!-- ================= PAGINA 3: FOTOGRAFIA & DESIGN INDUSTRIALE ================= -->
+        <!-- ================= PAGINA 3: FOTOGRAFIA & DESIGN ================= -->
         <div id="design-foto-page" class="page-content">
             <header>
-                <h2 class="section-title" style="margin-bottom: 2rem;" data-i18n="photo-section-subtitle">Cultura Visiva & Forma</h2>
-                <h1 data-i18n="photo-title">Fotografia & Design Industriale</h1>
-                <p class="subtitle" style="margin-top: 0.5rem; max-width: 100%;" data-i18n="photo-subtitle">L'armonia tra forma e colore, la percezione visiva e il restauro di oggetti d'epoca.</p>
+                <h2 class="section-title">Galleria Visiva</h2>
+                <h1>Fotografia & Design Industriale</h1>
+                <p class="subtitle">Scatti analogici, sperimentazioni digitali e sensibilità estetica per il design meccanico.</p>
             </header>
-
-            <div class="passion-narrative">
-                <p data-i18n="photo-p1">Il <strong>design industriale</strong> e la <strong>fotografia</strong> non rappresentano per me un semplice passatempo: sono a tutti gli effetti un <strong>perno centrale nella mia vita</strong>, una lente speciale attraverso cui osservo, interpreto e interagisco con il mondo circostante.</p>
-                
-                <p data-i18n="photo-p2">La mia passione per il design nasce da una ricerca costante del <strong>gusto per l'armonia di forme e colori</strong>. Mi affascina il modo in cui una struttura, un oggetto o un'interfaccia riescano a coniugare funzionalità ed eleganza estetica. Quando questi elementi si fondono perfettamente, l'oggetto smette di essere soltanto utile e diventa un'icona capace di evocare emozioni profonde.</p>
-
-                <p data-i18n="photo-p3">Un esempio concreto di questo mio amore per l'estetica applicata è il <strong>restauro di un televisore Algol Brionvega (prima serie)</strong>. Disegnato negli anni '60 da Marco Zanuso e Richard Sapper, questo televisore rappresenta una pietra miliare del design industriale italiano. Riportare in vita questo capolavoro – curandone la scocca, le geometrie inconfondibili e i componenti interni – è stato un progetto entusiasmante che ha unito la mia manualità tecnica con il massimo rispetto per la storia del disegno industriale.</p>
-
-                <p data-i18n="photo-p4">Parallelamente, la <strong>fotografia</strong> è per me lo strumento d'elezione per catturare e congelare nel tempo queste geometrie e queste armonie cromatiche. Il mio parco attrezzatura comprende <strong>diverse fotocamere, sia digitali che analogiche</strong>: apprezzo l'immediatezza e la precisione del digitale così come la risposta materica, il ritmo lento e la pasta cromatica unica della pellicola analogica.</p>
-            </div>
 
             <div class="photo-grid-6">
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name">Algol Brionvega</span>
-                            <span class="specs" data-i18n="grid1-spec">Design Iconico 1° Serie</span>
-                        </div>
+                        <img src="foto-1.jpg" alt="Fotografia 1" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="grid1-cap">TV Algol Brionvega prima serie restaurato nei dettagli.</div>
+                    <div class="img-caption">Scatto Analogico 01</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name">Gear Analogico</span>
-                            <span class="specs" data-i18n="grid2-spec">Fotocamere a Pellicola</span>
-                        </div>
+                        <img src="foto-2.jpg" alt="Fotografia 2" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="grid2-cap">Selezione di corpi e lenti analogiche vintage.</div>
+                    <div class="img-caption">Scatto Analogico 02</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name">Set-up Digitale</span>
-                            <span class="specs" data-i18n="grid3-spec">Precisione & Sensore</span>
-                        </div>
+                        <img src="foto-3.jpg" alt="Fotografia 3" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="grid3-cap">Kit fotografico digitale per scatti di alta qualità.</div>
+                    <div class="img-caption">Sperimentazione Full Spectrum</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name" data-i18n="grid4-title">Geometrie & Forme</span>
-                            <span class="specs" data-i18n="grid4-spec">Studio delle Linee</span>
-                        </div>
+                        <img src="foto-4.jpg" alt="Fotografia 4" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="grid4-cap">Scatto focalizzato sull'armonia formale delle strutture.</div>
+                    <div class="img-caption">Dettaglio Meccanico 01</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name" data-i18n="grid5-title">Cromie & Luce</span>
-                            <span class="specs" data-i18n="grid5-spec">Pellicola / Digitale</span>
-                        </div>
+                        <img src="foto-5.jpg" alt="Fotografia 5" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="grid5-cap">Esperimenti cromatici e giochi di luce naturale.</div>
+                    <div class="img-caption">Dettaglio Meccanico 02</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name" data-i18n="grid6-title">Dettagli di Restauro</span>
-                            <span class="specs" data-i18n="grid6-spec">Materiali & Finiture</span>
-                        </div>
+                        <img src="foto-6.jpg" alt="Fotografia 6" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="grid6-cap">Particolari meccanici ed estetici dei progetti di restauro.</div>
+                    <div class="img-caption">Composizione Design</div>
                 </div>
             </div>
         </div>
 
-
-        <!-- ================= PAGINA 4: LA MIA PROPOSTA PER SWM ================= -->
+        <!-- ================= PAGINA 4: PROPOSTA SWM ================= -->
         <div id="swm-proposal-page" class="page-content">
             <header>
-                <h2 class="section-title" style="margin-bottom: 2rem;">Strategy & Brand Evolution</h2>
-                <h1 data-i18n="swm-title">La mia proposta per SWM</h1>
-                <p class="subtitle" style="margin-top: 0.5rem; max-width: 100%;" data-i18n="swm-subtitle">Un piano strategico per riposizionare il marchio, valorizzare le piattaforme chiave e conquistare le nuove generazioni.</p>
+                <span class="swm-badge">Progetto Strategico</span>
+                <h1 style="color: #fff;">La mia proposta per SWM</h1>
+                <p class="subtitle" style="color: var(--swm-muted);">Visione e sviluppo per l'evoluzione del brand su canali digitali.</p>
             </header>
 
-            <div class="passion-narrative">
-                <p data-i18n="swm-p1">SWM vanta una straordinaria tradizione meccanica e un potenziale di mercato notevole, ma richiede un rinnovato posizionamento strategico per intercettare i trend contemporanei. Le mie competenze professionali in qualità di <em>Digital Change & Innovation Analyst</em>, unite a un forte background nel design industriale, nella direzione visiva e alla conoscenza diretta del prodotto (essendo io stesso proprietario ed utilizzatore quotidiano di una <strong>SWM SM500R</strong>), si allineano perfettamente con gli obiettivi di rilancio e valorizzazione del brand.</p>
-                
-                <p data-i18n="swm-p2">L'obiettivo non è soltanto la vendita del mezzo, ma la costruzione di una solida cultura di marca e di una percezione ad alto valore aggiunto.</p>
-            </div>
-
-            <!-- SPAZIO PER 4 IMMAGINI PROPOSTA SWM -->
             <div class="swm-photo-grid-4">
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name">SM500R & RS500 Concept</span>
-                            <span class="specs">Livree & Graphic Kit 2026</span>
-                        </div>
+                        <img src="swm-concept-1.jpg" alt="Concept SWM 1" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="swm-grid1-cap">Ipotesi di restyling grafico per la gamma Supermoto ed Enduro.</div>
+                    <div class="img-caption">Concept UI / UX SWM Portal</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name">Neo-Retrò Heritage</span>
-                            <span class="specs">Driving Feeling & Design</span>
-                        </div>
+                        <img src="swm-concept-2.jpg" alt="Concept SWM 2" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="swm-grid2-cap">Concept per la gamma classica: dettagli materici ed estetica essenziale.</div>
+                    <div class="img-caption">Digital Assets & Livery Design</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name">Adventure Line Restyling</span>
-                            <span class="specs" data-i18n="swm-grid3-spec">Proporzioni & Finiture Premium</span>
-                        </div>
+                        <img src="swm-concept-3.jpg" alt="Concept SWM 3" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="swm-grid3-cap">Revisione dell'impatto visivo e del design per il segmento Adventure.</div>
+                    <div class="img-caption">Digital Marketing Strategy</div>
                 </div>
-
                 <div>
                     <div class="image-frame-container">
-                        <div class="photo-placeholder-img">
-                            <span class="model-name">Official Rally Kit</span>
-                            <span class="specs">Plug & Play Tower Setup</span>
-                        </div>
+                        <img src="swm-concept-4.jpg" alt="Concept SWM 4" class="portfolio-img">
                     </div>
-                    <div class="img-caption" data-i18n="swm-grid4-cap">Kit Rally dedicato alla serie 500cc per un'impronta da pura competizione.</div>
+                    <div class="img-caption">App Companion Mockup</div>
                 </div>
-            </div>
-
-            <!-- GRIGLIA STRATEGICA SWM -->
-            <div class="swm-grid-strategy">
-                
-                <!-- Pilastro 1 -->
-                <div class="swm-card-box">
-                    <span class="swm-badge">Supermoto & Enduro</span>
-                    <h3 data-i18n="strat1-h3">Rilancio SM500R / RS500 & Cultura "Bike Life"</h3>
-                    <p data-i18n="strat1-p">Rivoluzionare la percezione della linea 500cc attraverso livree moderne e pulite. Sfruttare la forte spinta della cultura <em>"bike life"</em> esplosa in Europa (sulla scia di fenomeni come Grenzgaenger) per posizionare il prodotto al centro della scena giovanile e digitale.</p>
-                </div>
-
-                <!-- Pilastro 2 -->
-                <div class="swm-card-box">
-                    <span class="swm-badge">Product Strategy</span>
-                    <h3 data-i18n="strat2-h3">Versione A3 & Tenuta del Valore Usato</h3>
-                    <p data-i18n="strat2-p">Introdurre a listino una variante ripotenziata nativa per patente A3. Questo spinge i clienti più giovani non solo ad acquistare la SM500R, ma a **mantenerla nel tempo**, aumentando il valore percepito del brand e sostenendo le quotazioni nel mercato dell'usato.</p>
-                </div>
-
-                <!-- Pilastro 3 -->
-                <div class="swm-card-box">
-                    <span class="swm-badge">Neo-Retrò Segment</span>
-                    <h3 data-i18n="strat3-h3">Rilancio Gamma Classic: Feeling > Cavalli</h3>
-                    <p data-i18n="strat3-p">Sfruttare il trend di mercato guidato da competitor come Royal Enfield, riorganizzando la gamma neo-retrò. L'obiettivo è mettere al centro l'estetica, la cura dei dettagli e un *driving feeling* appagante e rilassato, dove il piacere visivo e la guida prevalgono sulla ricerca della potenza pura.</p>
-                </div>
-
-                <!-- Pilastro 4 -->
-                <div class="swm-card-box">
-                    <span class="swm-badge">Adventure Segment</span>
-                    <h3 data-i18n="strat4-h3">Restyling Estetico della Linea Adventure</h3>
-                    <p data-i18n="strat4-p">Intervenire sul linguaggio stilistico della gamma Adventure per renderlo più filante, aggressivo e coerente con i canoni europei moderni. Una revisione delle proporzioni e delle finiture plastiche eleverebbe la percezione di qualità generale.</p>
-                </div>
-
-                <!-- Pilastro 5 (Esteso) -->
-                <div class="swm-card-box" style="grid-column: 1 / -1;">
-                    <span class="swm-badge">Accessories & Aftermarket</span>
-                    <h3 data-i18n="strat5-h3">Kit Rally Ufficiale per Piattaforma 500cc</h3>
-                    <p data-i18n="strat5-p">Sviluppare un kit trasformazione Rally (cupolino opaco, torretta portastrumenti, serbatoio maggiorato e paramotore dedicato) omologato e *plug & play* per RS500 e SM500R. Un accessorio strategico per intercettare la crescente domanda di moto da navigazione e donare un'immagine estremamente professionale al marchio.</p>
-                </div>
-
             </div>
         </div>
 
     </div>
 
-    <!-- SCRIPT LOGICA DI NAVIGAZIONE, TEMA E DIZIONARIO MULTILINGUA -->
     <script>
-        let currentLang = 'it';
-
-        const dictionary = {
-            it: {
-                // Nav
-                "nav-cv": "Curriculum & Experience",
-                "nav-moto": "La mia passione per il motociclismo",
-                "nav-photo": "Fotografia & Design",
-                "nav-swm": "La mia proposta per SWM",
-                
-                // Header & General CV
-                "age-badge": "27 anni",
-                "header-subtitle": "Appassionato di tecnologia, laureato in <em>ICT</em> ed esperto nello sviluppo di soluzioni IT innovative per ottimizzare le iniziative digitali.",
-                "location": "Limana, Veneto (Italia)",
-                "email-link": "Email Professionale",
-                "linkedin-link": "LinkedIn Profile",
-                "tagline": "Guido progetti di <strong>trasformazione digitale</strong> unendo visione strategica e solide competenze tecniche. Dai sistemi aziendali complessi allo sviluppo di soluzioni all'avanguardia, facilito il dialogo tra i requisiti di business e l'innovazione IT.",
-                "section-prof-title": "Percorso Professionale & Crescita",
-                "epta-meta": "Multinazionale > 2 Miliardi € di Fatturato | 10.000+ Dipendenti",
-                "epta-duration": "4 anni e 4 mesi complessivi",
-                "role1-date": "Feb 2026 — Presente",
-                "role1-p1": "Guido progetti di innovazione in ambito IT in una realtà strutturata e globale come Epta Group, operando in stretta collaborazione con le diverse funzioni aziendali. Il mio obiettivo è individuare e implementare soluzioni tecnologiche all'avanguardia che supportino la trasformazione digitale dell'azienda. Partecipo attivamente a conferenze e laboratori internazionali per intercettare trend emergenti e integrare nuove opportunità nei processi interni.",
-                "role1-p2": "Seguo lo sviluppo dei progetti end-to-end, coordinando le attività dei team interni e dei partner esterni con un approccio altamente strutturato, riportando direttamente al Direttore Globale Digital Integration & Innovation.",
-                "role2-p": "Supporto strategico al dipartimento Marketing nell'individuare e implementare soluzioni tecnologiche mirate alle sue esigenze operative e strategiche. Analisi dei requisiti aziendali, collaborazione cross-funzionale tra team IT e Marketing, e gestione di progetti di trasformazione digitale per garantire il perfetto allineamento tra obiettivi di business e soluzioni tecniche.",
-                "role3-p": "Risoluzione di problematiche tecniche sia di routine che complesse, standardizzazione dei processi interni e redazione di documentazione tecnica accurata. Collaborazione strategica con i team di sicurezza aziendali per monitorare e migliorare la protezione degli endpoint di rete.",
-                "skill-comm": "Comunicazione",
-                "past-title": "Operaio specializzato (CNC a 5 assi)",
-                "past-p": "Operatore su macchine CNC a 5 assi come lavoratore somministrato. Programmazione delle macchine in codice ISO e gestione di flussi operativi complessi.",
-
-                // Motociclismo
-                "moto-section-subtitle": "Le mie Passioni",
-                "moto-title": "La mia passione per il motociclismo",
-                "moto-subtitle": "Un viaggio tra ingegneria, restauro conservativo ed emozione pura su due ruote.",
-                "moto-p1": "La mia attrazione per il mondo del motociclismo non è una scoperta recente, ma un filo conduttore che attraversa la mia vita fin da quando ero ragazzino. È una passione viscerale, nata tra il rumore dei motori e il fascino della velocità strutturata, ma cresciuta soprattutto grazie a un legame profondo e condiviso in famiglia.",
-                "moto-p2": "Un momento di svolta indimenticabile risale a quando avevo <strong>19 anni</strong>: l'anno in cui ho partecipato per la prima volta a <strong>EICMA</strong> (l'Esposizione Internazionale Ciclo Motociclo e Accessori). È stata un'esperienza incredibile che ho vissuto <strong>insieme a mio papà</strong>, anch'esso grande e storico appassionato. Camminare tra i padiglioni milanesi, circondati dalle anteprime mondiali e dal meglio dell'ingegneria su due ruote, ha cementato definitivamente il mio amore per questo universo.",
-                "moto-p3": "Nel corso del tempo, quella che era solo un'ammirazione estetica si è trasformata in obiettivi concreti. La mia moto dei sogni è sempre stata la splendida <strong>SWM SM500R</strong>. Con determinazione e sacrificio, sono finalmente riuscito ad acquistarla: la possiedo tuttora e la ritengo una moto eccezionale, capace di regalare sensazioni di guida uniche e un'agilità tecnica impressionante sulle strade più impegnative.",
-                "moto-p4": "Tuttavia, il mio interesse non si ferma alle prestazioni moderne. La mia curiosità spazia con altrettanto vigore nel <strong>motociclismo d'epoca</strong>. È per questo motivo che la mia seconda compagna di viaggio è una magnifica e iconica <strong>Honda GL1000 Gold Wing del 1976</strong>. Un vero e proprio monumento della storia motociclistica che sto attualmente restaurando e mantenendo personalmente con un'assoluta dovizia di particolari, cercando di preservarne l'autenticità e lo splendore originale.",
-                "moto-p5": "Ciò che mi affascina profondamente è l'unione perfetta tra la <strong>meccanica pura</strong> e il <strong>design industriale</strong> di questi splendidi oggetti. Una motocicletta non è solo un mezzo di trasporto; è un'opera d'arte ingegneristica in cui ogni accoppiamento meccanico, ogni linea del telaio e ogni vibrazione raccontano una storia di precisione e genialità umana.",
-                "swm-specs": "Performance & Agilità Moderna",
-                "swm-caption": "La mia SWM SM500R: la realizzazione di un sogno su due ruote.",
-                "honda-specs": "Restauro Conservativo d'Epoca",
-                "honda-caption": "La storica Honda GL1000 Gold Wing del 1976 in fase di meticoloso restauro.",
-
-                // Fotografia & Design
-                "photo-section-subtitle": "Cultura Visiva & Forma",
-                "photo-title": "Fotografia & Design Industriale",
-                "photo-subtitle": "L'armonia tra forma e colore, la percezione visiva e il restauro di oggetti d'epoca.",
-                "photo-p1": "Il <strong>design industriale</strong> e la <strong>fotografia</strong> non rappresentano per me un semplice passatempo: sono a tutti gli effetti un <strong>perno centrale nella mia vita</strong>, una lente speciale attraverso cui osservo, interpreto e interagisco con il mondo circostante.",
-                "photo-p2": "La mia passione per il design nasce da una ricerca costante del <strong>gusto per l'armonia di forme e colori</strong>. Mi affascina il modo in cui una struttura, un oggetto o un'interfaccia riescano a coniugare funzionalità ed eleganza estetica. Quando questi elementi si fondono perfettamente, l'oggetto smette di essere soltanto utile e diventa un'icona capace di evocare emozioni profonde.",
-                "photo-p3": "Un esempio concreto di questo mio amore per l'estetica applicata è il <strong>restauro di un televisore Algol Brionvega (prima serie)</strong>. Disegnato negli anni '60 da Marco Zanuso e Richard Sapper, questo televisore rappresenta una pietra miliare del design industriale italiano. Riportare in vita questo capolavoro – curandone la scocca, le geometrie inconfondibili e i componenti interni – è stato un progetto entusiasmante che ha unito la mia manualità tecnica con il massimo rispetto per la storia del disegno industriale.",
-                "photo-p4": "Parallelamente, la <strong>fotografia</strong> è per me lo strumento d'elezione per catturare e congelare nel tempo queste geometrie e queste armonie cromatiche. Il mio parco attrezzatura comprende <strong>diverse fotocamere, sia digitali che analogiche</strong>: apprezzo l'immediatezza e la precisione del digitale così come la risposta materica, il ritmo lento e la pasta cromatica unica della pellicola analogica.",
-                "grid1-spec": "Design Iconico 1° Serie",
-                "grid1-cap": "TV Algol Brionvega prima serie restaurato nei dettagli.",
-                "grid2-spec": "Fotocamere a Pellicola",
-                "grid2-cap": "Selezione di corpi e lenti analogiche vintage.",
-                "grid3-spec": "Precisione & Sensore",
-                "grid3-cap": "Kit fotografico digitale per scatti di alta qualità.",
-                "grid4-title": "Geometrie & Forme",
-                "grid4-spec": "Studio delle Linee",
-                "grid4-cap": "Scatto focalizzato sull'armonia formale delle strutture.",
-                "grid5-title": "Cromie & Luce",
-                "grid5-spec": "Pellicola / Digitale",
-                "grid5-cap": "Esperimenti cromatici e giochi di luce naturale.",
-                "grid6-title": "Dettagli di Restauro",
-                "grid6-spec": "Materiali & Finiture",
-                "grid6-cap": "Particolari meccanici ed estetici dei progetti di restauro.",
-
-                // SWM Proposal
-                "swm-title": "La mia proposta per SWM",
-                "swm-subtitle": "Un piano strategico per riposizionare il marchio, valorizzare le piattaforme chiave e conquistare le nuove generazioni.",
-                "swm-p1": "SWM vanta una straordinaria tradizione meccanica e un potenziale di mercato notevole, ma richiede un rinnovato posizionamento strategico per intercettare i trend contemporanei. Le mie competenze professionali in qualità di <em>Digital Change & Innovation Analyst</em>, unite a un forte background nel design industriale, nella direzione visiva e alla conoscenza diretta del prodotto (essendo io stesso proprietario ed utilizzatore quotidiano di una <strong>SWM SM500R</strong>), si allineano perfettamente con gli obiettivi di rilancio e valorizzazione del brand.",
-                "swm-p2": "L'obiettivo non è soltanto la vendita del mezzo, ma la costruzione di una solida cultura di marca e di una percezione ad alto valore aggiunto.",
-                "swm-grid1-cap": "Ipotesi di restyling grafico per la gamma Supermoto ed Enduro.",
-                "swm-grid2-cap": "Concept per la gamma classica: dettagli materici ed estetica essenziale.",
-                "swm-grid3-spec": "Proporzioni & Finiture Premium",
-                "swm-grid3-cap": "Revisione dell'impatto visivo e del design per il segmento Adventure.",
-                "swm-grid4-cap": "Kit Rally dedicato alla serie 500cc per un'impronta da pura competizione.",
-                "strat1-h3": "Rilancio SM500R / RS500 & Cultura \"Bike Life\"",
-                "strat1-p": "Rivoluzionare la percezione della linea 500cc attraverso livree moderne e pulite. Sfruttare la forte spinta della cultura <em>\"bike life\"</em> esplosa in Europa (sulla scia di fenomeni come Grenzgaenger) per posizionare il prodotto al centro della scena giovanile e digitale.",
-                "strat2-h3": "Versione A3 & Tenuta del Valore Usato",
-                "strat2-p": "Introdurre a listino una variante ripotenziata nativa per patente A3. Questo spinge i clienti più giovani non solo ad acquistare la SM500R, ma a **mantenerla nel tempo**, aumentando il valore percepito del brand e sostenendo le quotazioni nel mercato dell'usato.",
-                "strat3-h3": "Rilancio Gamma Classic: Feeling > Cavalli",
-                "strat3-p": "Sfruttare il trend di mercato guidato da competitor come Royal Enfield, riorganizzando la gamma neo-retrò. L'obiettivo è mettere al centro l'estetica, la cura dei dettagli e un *driving feeling* appagante e rilassato, dove il piacere visivo e la guida prevalgono sulla ricerca della potenza pura.",
-                "strat4-h3": "Restyling Estetico della Linea Adventure",
-                "strat4-p": "Intervenire sul linguaggio stilistico della gamma Adventure per renderlo più filante, aggressivo e coerente con i canoni europei moderni. Una revisione delle proporzioni e delle finiture plastiche eleverebbe la percezione di qualità generale.",
-                "strat5-h3": "Kit Rally Ufficiale per Piattaforma 500cc",
-                "strat5-p": "Sviluppare un kit trasformazione Rally (cupolino opaco, torretta portastrumenti, serbatoio maggiorato e paramotore dedicato) omologato e *plug & play* per RS500 e SM500R. Un accessorio strategico per intercettare la crescente domanda di moto da navigazione e donare un'immagine estremamente professionale al marchio."
-            },
-            en: {
-                // Nav
-                "nav-cv": "Resume & Experience",
-                "nav-moto": "My Passion for Motorcycling",
-                "nav-photo": "Photography & Design",
-                "nav-swm": "My Proposal for SWM",
-                
-                // Header & General CV
-                "age-badge": "27 years old",
-                "header-subtitle": "Technology enthusiast, <em>ICT</em> graduate, and expert in developing innovative IT solutions to optimize digital initiatives.",
-                "location": "Limana, Veneto (Italy)",
-                "email-link": "Professional Email",
-                "linkedin-link": "LinkedIn Profile",
-                "tagline": "I lead <strong>digital transformation</strong> projects by combining strategic vision with solid technical skills. From complex enterprise systems to cutting-edge solutions, I bridge the gap between business requirements and IT innovation.",
-                "section-prof-title": "Professional Journey & Growth",
-                "epta-meta": "Multinational > €2 Billion Turnover | 10,000+ Employees",
-                "epta-duration": "4 years and 4 months overall",
-                "role1-date": "Feb 2026 — Present",
-                "role1-p1": "I lead IT innovation projects within a highly structured global organization like Epta Group, working in close collaboration with various business functions. My goal is to identify and implement cutting-edge technological solutions that support the company's digital transformation. I actively participate in international conferences and workshops to intercept emerging trends and integrate new opportunities into internal processes.",
-                "role1-p2": "I oversee end-to-end project delivery, coordinating internal teams and external partners with a structured approach, reporting directly to the Global Digital Integration & Innovation Director.",
-                "role2-p": "Strategic support to the Marketing department in identifying and implementing technology solutions tailored to operational and strategic needs. Business requirements analysis, cross-functional collaboration between IT and Marketing teams, and digital transformation project management to ensure perfect alignment between business goals and technical solutions.",
-                "role3-p": "Resolution of routine and complex technical issues, standardization of internal processes, and drafting of accurate technical documentation. Strategic collaboration with corporate security teams to monitor and enhance network endpoint protection.",
-                "skill-comm": "Communication",
-                "past-title": "Specialized Operator (5-Axis CNC)",
-                "past-p": "Operator on 5-axis CNC machines as a temporary worker. Programming machines in ISO code and managing complex operational workflows.",
-
-                // Motociclismo
-                "moto-section-subtitle": "My Passions",
-                "moto-title": "My Passion for Motorcycling",
-                "moto-subtitle": "A journey through engineering, conservative restoration, and pure emotion on two wheels.",
-                "moto-p1": "My attraction to the world of motorcycling is not a recent discovery, but a common thread running through my life since I was a boy. It is a visceral passion, born amidst the roar of engines and the charm of structured speed, but grown above all thanks to a deep, shared family bond.",
-                "moto-p2": "An unforgettable turning point dates back to when I was <strong>19 years old</strong>: the year I attended <strong>EICMA</strong> (the International Motorcycle and Accessories Exhibition) for the first time. It was an incredible experience shared <strong>together with my dad</strong>, who is also a passionate enthusiast. Walking through the Milanese exhibition halls, surrounded by world premieres and the finest two-wheeled engineering, permanently cemented my love for this universe.",
-                "moto-p3": "Over time, what started as aesthetic admiration evolved into concrete goals. My dream motorcycle was always the magnificent <strong>SWM SM500R</strong>. With determination and sacrifice, I finally managed to purchase it: I still own it today and consider it an exceptional machine, capable of delivering unique riding sensations and impressive technical agility on the most demanding roads.",
-                "moto-p4": "However, my interest doesn't stop at modern performance. My curiosity extends with equal enthusiasm into <strong>classic motorcycling</strong>. This is why my second riding companion is a magnificent and iconic <strong>1976 Honda GL1000 Gold Wing</strong>. A true monument of motorcycle history that I am personally restoring and maintaining with meticulous detail, striving to preserve its authenticity and original glory.",
-                "moto-p5": "What deeply fascinates me is the perfect harmony between <strong>pure mechanics</strong> and <strong>industrial design</strong> in these magnificent machines. A motorcycle is not just a means of transport; it is a work of engineering art where every mechanical coupling, frame line, and engine vibration tells a story of human precision and brilliance.",
-                "swm-specs": "Modern Performance & Agility",
-                "swm-caption": "My SWM SM500R: a dream realized on two wheels.",
-                "honda-specs": "Vintage Conservative Restoration",
-                "honda-caption": "The historic 1976 Honda GL1000 Gold Wing undergoing meticulous restoration.",
-
-                // Fotografia & Design
-                "photo-section-subtitle": "Visual Culture & Form",
-                "photo-title": "Photography & Industrial Design",
-                "photo-subtitle": "The harmony between shape and color, visual perception, and the restoration of vintage objects.",
-                "photo-p1": "For me, <strong>industrial design</strong> and <strong>photography</strong> are not mere hobbies: they are a <strong>central pillar of my life</strong>, a special lens through which I observe, interpret, and interact with the world around me.",
-                "photo-p2": "My passion for design stems from a constant search for <strong>harmony in form and color</strong>. I am fascinated by how a structure, object, or interface can seamlessly combine functionality with aesthetic elegance. When these elements blend perfectly, an object ceases to be merely useful and becomes an icon capable of evoking deep emotions.",
-                "photo-p3": "A concrete example of my passion for applied aesthetics is the <strong>restoration of an Algol Brionvega TV (1st series)</strong>. Designed in the 1960s by Marco Zanuso and Richard Sapper, this TV represents a milestone in Italian industrial design. Bringing this masterpiece back to life—casing, iconic geometry, and internal components—was an exciting project combining technical craftsmanship with utmost respect for design history.",
-                "photo-p4": "In parallel, <strong>photography</strong> is my tool of choice for capturing and freezing these geometric lines and chromatic harmonies in time. My camera kit includes <strong>both digital and film cameras</strong>: I value the immediacy and precision of digital, as well as the tactile response, deliberate pace, and unique color rendering of analog film.",
-                "grid1-spec": "Iconic Design 1st Series",
-                "grid1-cap": "Algol Brionvega TV (1st Series) restored in detail.",
-                "grid2-spec": "Film Camera Gear",
-                "grid2-cap": "Selection of vintage analog bodies and lenses.",
-                "grid3-spec": "Precision & Sensor",
-                "grid3-cap": "Digital photography kit for high-quality shots.",
-                "grid4-title": "Geometry & Shapes",
-                "grid4-spec": "Line & Structure Study",
-                "grid4-cap": "Shot focused on the formal harmony of architectural structures.",
-                "grid5-title": "Colors & Light",
-                "grid5-spec": "Film / Digital",
-                "grid5-cap": "Chromatic experiments and natural light interplay.",
-                "grid6-title": "Restoration Details",
-                "grid6-spec": "Materials & Finishes",
-                "grid6-cap": "Mechanical and aesthetic details from restoration projects.",
-
-                // SWM Proposal
-                "swm-title": "My Proposal for SWM",
-                "swm-subtitle": "A strategic plan to reposition the brand, enhance key platforms, and win over new generations.",
-                "swm-p1": "SWM boasts an extraordinary mechanical heritage and remarkable market potential, but requires a refreshed strategic positioning to capture contemporary trends. My professional expertise as a <em>Digital Change & Innovation Analyst</em>, combined with a strong background in industrial design, visual direction, and hands-on product experience (as an owner and daily rider of an <strong>SWM SM500R</strong>), aligns perfectly with the brand's relaunch and elevation goals.",
-                "swm-p2": "The goal is not merely selling motorcycles, but building a solid brand culture and a high-value perception.",
-                "swm-grid1-cap": "Graphic restyling concept for the Supermoto and Enduro lineup.",
-                "swm-grid2-cap": "Concept for the classic range: tactile details and essential aesthetics.",
-                "swm-grid3-spec": "Proportions & Premium Finishes",
-                "swm-grid3-cap": "Visual impact and design overhaul for the Adventure segment.",
-                "swm-grid4-cap": "Official Rally Kit for the 500cc series for a true competition look.",
-                "strat1-h3": "Relaunch SM500R / RS500 & \"Bike Life\" Culture",
-                "strat1-p": "Revolutionize the perception of the 500cc line through clean, modern liveries. Leverage the strong <em>\"bike life\"</em> culture booming across Europe (following movements like Grenzgaenger) to place the product at the heart of the youth and digital scene.",
-                "strat2-h3": "Full Power A3 Variant & Used Value Retention",
-                "strat2-p": "Introduce a factory full-power variant for A3 license holders. This encourages younger riders not only to buy the SM500R, but to **keep it longer**, increasing brand equity and protecting resale values on the used market.",
-                "strat3-h3": "Classic Range Revamp: Riding Feeling > Horsepower",
-                "strat3-p": "Capitalize on market trends driven by competitors like Royal Enfield by restructuring the neo-retro line. The focus shifts to aesthetics, craftsmanship, and a relaxing, rewarding *riding feeling*, where visual pleasure and ride quality supersede raw power.",
-                "strat4-h3": "Aesthetic Restyling of the Adventure Lineup",
-                "strat4-p": "Redesign the visual language of the Adventure range to make it sleeker, more aggressive, and aligned with modern European tastes. Refining bodywork proportions and plastic finishes will elevate overall quality perception.",
-                "strat5-h3": "Official Rally Kit for the 500cc Platform",
-                "strat5-p": "Develop an officially approved, *plug & play* Rally kit (matte fairing, navigation tower, oversized tank, and engine guard) for RS500 and SM500R. A strategic accessory line to capture growing adventure-navigation demand and project a professional brand image."
-            }
-        };
-
-        function switchPage(pageId, buttonElement) {
-            // Nascondi tutte le pagine
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
-
-            // Rimuovi la classe active da tutti i bottoni
-            const buttons = document.querySelectorAll('.nav-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Attiva la pagina e il bottone
+        function switchPage(pageId, btn) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            
             document.getElementById(pageId).classList.add('active');
-            buttonElement.classList.add('active');
+            btn.classList.add('active');
 
-            // Gestione Dinamica Tema SWM
             const container = document.getElementById('main-container');
-            if (pageId === 'swm-proposal-page') {
+            const body = document.body;
+
+            if(pageId === 'swm-proposal-page') {
                 container.classList.add('swm-theme');
-                document.body.classList.add('swm-mode');
+                body.classList.add('swm-mode');
             } else {
                 container.classList.remove('swm-theme');
-                document.body.classList.remove('swm-mode');
+                body.classList.remove('swm-mode');
             }
-            
-            // Scroll in cima
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function toggleLanguage() {
-            currentLang = currentLang === 'it' ? 'en' : 'it';
-            document.getElementById('lang-btn-label').innerText = currentLang === 'it' ? 'EN' : 'IT';
-            document.documentElement.lang = currentLang;
-
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (dictionary[currentLang][key]) {
-                    el.innerHTML = dictionary[currentLang][key];
-                }
-            });
+            const btnLabel = document.getElementById('lang-btn-label');
+            btnLabel.textContent = btnLabel.textContent === 'EN' ? 'IT' : 'EN';
         }
     </script>
-
 </body>
 </html>
